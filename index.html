@@ -16,7 +16,7 @@
       <header>
          <img
              src="images/portfolio.png"
-			 class="headerimage"
+			 class="headerimage img-fluid"
              alt="..."
              />
          <nav>
@@ -78,4 +78,57 @@
         </div>
     </div>
 	</div>
+	
+	<!-- The overlay to be shown on image click -->
+<div class="overlay" id="overlay">
+    <img src="" alt="Bee" id="overlayImage">
+</div>
+		
+	<script>
+  // Get references to the elements
+  const imageContainers = document.querySelectorAll('.img-fluid.hover-zoom');
+  const overlay = document.getElementById('overlay');
+  const overlayImage = document.getElementById('overlayImage');
+
+  // Add click event listeners to all image containers
+  imageContainers.forEach((imageContainer) => {
+    imageContainer.addEventListener('click', function () {
+      // Get the source of the clicked image
+      const imageUrl = this.src;
+
+      // Update the overlay image source
+      overlayImage.src = imageUrl;
+
+      // Show the overlay
+      overlay.style.display = 'flex';
+	  
+	  
+
+    });
+  });
+
+  // Add click event listener to the overlay to close it
+  overlay.addEventListener('click', function () {
+    // Hide the overlay
+    overlay.style.display = 'none';
+  });
+  
+    // Disable right-click on the overlay image
+  overlayImage.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // Disable drag-and-drop for the overlay image
+  overlayImage.addEventListener('dragstart', function (e) {
+    e.preventDefault();
+  });
+
+  // Add click event listener to the overlay to close it
+  overlay.addEventListener('click', function () {
+    // Hide the overlay
+    overlay.style.display = 'none';
+  });
+</script>
+	
+	</body>
 </html>

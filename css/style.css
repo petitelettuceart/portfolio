@@ -86,9 +86,7 @@ a:hover {
 	padding: 20px;
 }
 
-.headerimage {
-height:545px;	
-}
+
 
 .section {
     padding: 30px;
@@ -103,8 +101,29 @@ img
 
 .hover-zoom {
   transition: transform 0.2s ease;
+    cursor: pointer;
 }
 
 .hover-zoom:hover {
   transform: scale(1.05);
+}
+
+/* Style the overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+/* Style the image inside the overlay */
+#overlayImage {
+  max-width: 90%;
+  max-height: 90%;
 }
