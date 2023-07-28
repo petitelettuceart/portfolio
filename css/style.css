@@ -89,3 +89,22 @@ a:hover {
 .headerimage {
 height:545px;	
 }
+
+.section {
+    padding: 30px;
+	text-align: center; /* Center align the content within each section */
+	background-color: #D0DFC8;
+}
+
+img 
+{
+	margin-top: var(--margin);
+}
+
+.hover-zoom {
+  transition: transform 0.2s ease;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
