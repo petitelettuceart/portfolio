@@ -82,10 +82,6 @@ a:hover {
     color: green;
 }
 
-.carousel{
-	padding: 20px;
-}
-
 .headerimage {
 height:545px;	
 }
@@ -98,7 +94,15 @@ height:545px;
 
 img 
 {
-	margin-top: var(--margin);
+	max-width: 100%;
+    height: auto;
+}
+
+/* Apply margin on non-phone devices */
+@media (min-width: 1768px) {
+    img {
+        margin-top: var(--margin);
+    }
 }
 
 .hover-zoom {
